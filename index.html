@@ -4,30 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
+  <link rel="stylesheet" href="src/styles.css">
 </head>
 
-<header>
-  <form >
-    <input type="text" placeholder="Enter a city.." required >
-    <input type="search" value="Search">
-  </form>
-</header>
-
 <body>
-  <h1>Paris</h1>
-  <p>
-    Tuesday 11:39, light rain <br>
-    Humidity: 84%, Wind: 4.63km/h
-  </p>
-  <div class="temparature">
-    ☁️ 10 °C
+  <div class="weather-app">
+    <header>
+      <form >
+        <div class="search">
+          <input type="text" class="city-input" placeholder="Enter a city.." required >
+        <input type="search" class="search-city" value="Search">
+        </div>
+      </form>
+    </header>
+    
+    <main>
+      <div class="temparature-details">
+        <h1 class="city">Paris</h1>
+      <p>
+        Tuesday 11:39, light rain <br>
+        Humidity: <span class="humidity">84%</span>, 
+        Wind: <span class="wind">4.63km/h</span>
+      </p>
+      </div>
+
+      <div class="temparature">
+        <div class="temparature-icon">☁️ </div> 
+        <div class="temparature-value">10</div> 
+        <div class="temparature-unit">°C</div>
+      </div>
+    </main>
+    
+    <footer>
+      This project was coded by 
+      <a href="">Phumla Sithole</a>, 
+      is <a href="">open-sourced on GitHub </a> 
+      and <a href="">hosted on Netlify</a> 
+    </footer>
   </div>
 </body>
-
-<footer>
-  This project was coded by 
-  <a href="">Phumla Sithole</a>, 
-  is <a href="">open-sourced on GitHub </a> 
-  and <a href="">hosted on Netlify</a> 
-</footer>
 </html>
