@@ -74,7 +74,7 @@ footer {
 }
 
 #temparature-value {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 68px;
   line-height: 68px;
 }
