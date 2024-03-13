@@ -1,11 +1,21 @@
 function findTemperature(response){
 
-    let cityElement = document.querySelector(".city");
+    let cityElement = document.querySelector("#city");
     cityElement.innerHTML = response.data.city;
-    let temperatureElement = document.querySelector(".temparature-value");
+    let temperatureElement = document.querySelector("#temparature-value");
     let temparature = response.data.temperature.current;
     temperatureElement.innerHTML = Math.round(temparature);
+    let tempIcon = document.querySelector("#temparature-icon");
     console.log(response.data);
+
+    let humidityElement = document.querySelector("#humidity");
+    let windElemnt = document.querySelector("#wind");
+    let wind = Math.round(response.data.temperature.humidity);
+    humidityElement.innerHTML = `${wind}%`;
+    let speed = Math.round(response.data.wind.speed);
+    windElemnt.innerHTML = `${speed}km/h`;
+    
+
 }
 
 
