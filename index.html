@@ -5,15 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <link rel="stylesheet" href="src/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
 </head>
 
 <body>
   <div class="weather-app">
     <header>
-      <form >
+      <form class="search-form">
         <div class="search">
           <input type="text" class="city-input" placeholder="Enter a city.." required >
-        <input type="search" class="search-city" value="Search">
+          <input type="submit" class="search-city" value="Search">
         </div>
       </form>
     </header>
@@ -42,5 +44,6 @@
       and <a href="">hosted on Netlify</a> 
     </footer>
   </div>
+  <script src="src/index.js"></script>
 </body>
 </html>

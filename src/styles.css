@@ -14,14 +14,14 @@ main {
 }
 
 main p {
-  color: rgba(30, 30, 32, 0.4);
+  color: rgb(57, 95, 13);
   font-weight: 500;
 }
 
 footer {
   font-size: 14px;
   text-align: center;
-  color: rgba(30, 30, 32, 0.4);
+  color: rgb(77, 104, 47);
 }
 
 .weather-app {
@@ -42,6 +42,7 @@ footer {
   padding: 18px;
   border-radius: 6px;
   width: 70%;
+  color: rgb(57, 95, 13);
 }
 
 .search-city {
