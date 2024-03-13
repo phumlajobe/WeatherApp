@@ -70,7 +70,7 @@ footer {
 
 #temparature-icon {
   height: 68px;
-  width: 58px;
+  line-height: 68px;
 }
 
 #temparature-value {
