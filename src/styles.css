@@ -88,6 +88,8 @@ footer {
   display: flex;
   padding: 35px;
   padding-top: 0px;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .forecast-day{
@@ -109,4 +111,5 @@ footer {
 
 .focast-temp{
   font-size: 13px;
+  color: rgb(238, 34, 153);
 }
