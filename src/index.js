@@ -63,28 +63,39 @@ function getForecast(city){
     axios.get(apiUrl).then(displayForecast);
 }
 
+function formatDay(timeStamp){
+    let date = new Date(timeStamp * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+
+    return days[date.getDay()];
+}
+
 function displayForecast(response){
     console.log(response.data);
 
-    let days = ["Sun", "Mon", "Tue", "Wed", "Thu","Fri", "Sat"];
     let forecast= "";
     
-    days.forEach(function(day){
-        forecast += `
-        <div class="forecast-day">
-            <div class="focast-date">
-                ${day}
+    response.data.daily.forEach(function(day, index){
+
+        if(index < 5){
+            let tempMin = Math.round(day.temperature.minimum);
+            let tempMax = Math.round(day.temperature.maximum);
+            let iconUrl = day.condition.icon_url;
+
+            forecast += `
+            <div class="forecast-day">
+                <div class="focast-date">
+                    ${formatDay(day.time)}
+                </div>
+                <!--  -->
+                <img src="${iconUrl}" alt="Temperature-icon" class="temparature-icon">
+                <div class="focast-temp">
+                    <span class="focast-max-temp">${tempMax}°</span>/ 
+                    <span class="focast-min-temp">${tempMin}°</span>
+                </div>
             </div>
-            <!-- <img src="" alt=""> -->
-            <div class="focast-image">
-                🌩️
-            </div>
-            <div class="focast-temp">
-                <span class="focast-max-temp">18°</span>/ 
-                <span class="focast-min-temp">9°</span>
-            </div>
-        </div>
-    `;
+        `;
+        }
     });
 
     let forecastElement = document.querySelector(".temperature-focast-container");

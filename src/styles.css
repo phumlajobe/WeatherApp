@@ -73,6 +73,13 @@ footer {
   line-height: 68px;
 }
 
+.temparature-icon {
+  height: 62px;
+  line-height: 62px;
+  display: block;
+  margin: 0 auto;
+}
+
 #temparature-value {
   font-weight: 500;
   font-size: 68px;
@@ -88,21 +95,18 @@ footer {
   display: flex;
   padding: 35px;
   padding-top: 0px;
-  width: fit-content;
+  width: 100%;
   margin: 0 auto;
 }
 
 .forecast-day{
-  padding: 15px;
+  padding: 20px;
   padding-top: 0px;
-}
-
-.focast-image{
-  font-size: 30px;
 }
 
 .focast-date {
   opacity: 0.6;
+  text-align: center;
 }
 
 .focast-min-temp{
@@ -110,6 +114,7 @@ footer {
 }
 
 .focast-temp{
+  text-align: center;
   font-size: 13px;
   color: rgb(238, 34, 153);
 }
